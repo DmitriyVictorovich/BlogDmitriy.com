@@ -1,0 +1,82 @@
+@import url("common.css");
+
+/* Wrapper */
+.wrapper {
+    background: #fff;
+    background-size: cover;
+    margin: 40px;
+}
+
+.wrapper__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper__col--first {
+    width: 50%;
+}
+
+.wrapper__col--second {
+    width: 40%;
+}
+
+.wrapper__title {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: rgb(100, 169, 248);
+    margin-bottom: 15px;
+}
+
+.wrapper__suptitle {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 2;
+    color: rgb(100, 169, 248);
+}
+
+.wrapper__text {
+    line-height: 1;
+    font-weight: 300;
+}
+
+.wr__list_email {
+    text-decoration: none;
+    color: rgb(100, 169, 248);
+}
+
+/* Contact us */
+.contact {
+    width: 100%;
+}
+
+::placeholder {
+    color: black;
+}
+
+.contact__input {
+    width: 100%;
+    font-family:'Roboto', sans-serif;
+    font-size: 20px;
+    color: black;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid grey;
+    margin: 10px 0;
+}
+
+.contact__btn {
+    width: 100%;
+    font-family:'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    background: black;
+    padding: 15px;
+    transition: background-color .2s linear;
+}
+
+.contact__btn:hover {
+    background-color: rgb(100, 169, 248);
+}
+

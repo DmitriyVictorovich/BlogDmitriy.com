@@ -1,0 +1,257 @@
+html {
+    width: 100%;
+    height: 100%;
+} 
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: black;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+
+/* Links */
+.selected {
+    pointer-events: none;
+}
+
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1030px; 
+    padding: 0 15px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+/* Header */
+.header {
+    width: 100%;
+    background-color: rgb(100, 169, 248);
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-family: 'Roboto Slab', serif;
+    font-size: 40px;
+    font-weight: 900;
+    color: #fff;
+}
+@media (max-width: 1000px) {
+    .header__logo {
+        font-size: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .header__logo {
+        font-size: 40px;
+    }
+}
+
+/* Just for Articles.html */
+.header__burger {
+    display: none;
+}
+@media (max-width: 767px) {
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+    }
+    .header__burger span {
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 9px;
+        transition: all .2s linear;
+    }
+    .header__burger::before,
+    .header__burger::after {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all .3s linear;
+    }
+    .header__burger::before {
+        top: 0;
+    }
+    .header__burger::after {
+        bottom: 0;
+    }
+    .header__burger.active span {
+        transform: scale(0);
+    }
+    .header__burger.active::before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header__burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(100, 169, 248);
+        z-index: 1;
+        transition: all .3s linear;
+    }
+    .header__inner nav {
+        position:fixed;
+        display: flex;
+        flex-flow: column wrap;
+        transform: translate(0, 150px);
+    }
+}
+
+
+/* Nav */
+.nav {
+    font-size: 20px;
+    font-weight: 500;
+}
+@media (max-width: 767px) {
+    .nav {
+        font-size: 20px;
+    }
+} 
+
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    padding: 40px 40px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color .2s linear;
+}
+@media (max-width: 767px) {
+    .nav__link {
+        padding: 15px 20px;
+    }
+} 
+
+.nav__link:hover {
+    background-color: rgb(161, 202, 248);
+}
+
+.nav__link--logo_top {
+    padding: 24px 0;
+}
+
+.nav--footer {
+    color: white;
+}
+@media (max-width: 580px) {
+    .nav--footer {
+        position: relative;
+        right: 40px;
+    }
+}
+
+.nav__link--footer {
+    padding: 10px 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: color .2s linear;
+}
+
+.nav__link--footer:hover {
+    color: black;
+}
+
+
+/* footer */
+.footer {
+    width: 100%;
+    color: white;
+    background-color: rgb(100, 169, 248);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.footer__logo {
+    font-family: 'Roboto Slab', serif;
+    font-size: 90px;
+    font-weight: 900;
+    color: #fff;
+}
+@media (max-width: 1000px) {
+    .footer__logo {
+        font-size: 60px;
+    }
+}
+@media (max-width: 767px) {
+    .footer__logo {
+        font-size: 40px;
+    }
+}
+
+.footer__developer_list {
+    position: relative;
+    top: -10px;
+}
+@media (max-width: 767px) {
+    .footer__developer_list {
+        top:0;
+    }
+}
+@media (max-width: 580px) {
+    .footer__developer_list {
+        display: none;
+    }
+} 
+
+.footer__developer {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1;
+    position: relative; 
+    top:40px;
+    margin: 0;
+}
+@media (max-width: 767px) {
+    .footer__developer {
+        display: none;
+    }
+}

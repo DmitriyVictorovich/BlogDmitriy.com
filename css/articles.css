@@ -1,0 +1,102 @@
+@import url("common.css");
+
+
+/* Wrapper */
+.wrapper {
+    background: #fff;
+    background-size: cover;
+    margin: 40px;
+}
+@media (max-width: 1000px) {
+    .wrapper {
+        margin: 20px 10px;
+    }
+}
+@media (max-width: 767px) {
+    .wrapper {
+        margin: 10px 0;
+    }
+}
+
+.wrapper__title {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: rgb(100, 169, 248);
+    margin-bottom: 15px;
+    text-align: center;
+}
+@media (max-width: 1000px) {
+    .wrapper__title {
+        font-size: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .wrapper__title {
+        font-size: 25px;
+        margin: 0;
+    }
+}
+
+/* Tiles */
+.tiles__grid {
+    column-count: 4;
+    orphans: 2;
+    widows: 1;
+}
+@media (max-width: 767px) {
+    .tiles__grid {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: space-between;
+    }
+}
+
+.tiles__grid--item {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border-radius: 20px;
+    margin: 10px auto;
+    transition: box-shadow .4s linear, transform .2s linear;
+    overflow: hidden;
+}
+@media (max-width: 767px) {
+    .tiles__grid--item {
+        max-width: 48%;
+    }
+}
+
+.tile__main {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.tile__content img {
+    max-width: 100%;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+} 
+
+.title__container {
+    margin: 10px;
+    text-align: center;
+}
+
+.title__text {
+    color: rgb(100, 169, 248);
+    text-transform: uppercase;
+    transition: color .2s linear, text-shadow .5s linear;
+}
+
+.tiles__grid--item:hover {
+    box-shadow: 1px 2px 5px black;
+    transform: scale(1.05);
+}
+
+.title__text:hover {
+    color: black;
+    text-shadow: 1px 2px 5px black;
+}
